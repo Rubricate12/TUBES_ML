@@ -70,7 +70,7 @@ Ensure you have Python 3.x installed. It is recommended to use a virtual environ
 
 1.  **Clone this repository:**
     ```bash
-    git clone [https://github.com/Rubricate12/TUBES_ML.git](https://github.com/Rubricate12/TUBES_ML.git)
+    git clone https://github.com/Rubricate12/TUBES_ML.git
     cd TUBES_ML
     ```
 
