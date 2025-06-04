@@ -165,7 +165,6 @@ TUBES_ML/
 
 ## Contributors
 
-* **Arnoldus Bryan Hendry** - 1301220409 - ([https://github.com/Rubricate12])
-* **Muhammad Ma'ruf Firdaus** - 1301223001 - ([https://github.com/maruffirdaus])
-* **Riyan Syaputra** - [NIM/Role] - ([GitHub Profile Link if any])
-    *(Please fill in according to your group members)*
+* **Arnoldus Bryan Hendry** - 1301220409 - [github profile](https://github.com/Rubricate12)
+* **Muhammad Ma'ruf Firdaus** - 1301223001 - [github profile](https://github.com/maruffirdaus)
+* **Riyan Syaputra** - 130122 - 
