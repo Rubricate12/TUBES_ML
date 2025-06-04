@@ -115,7 +115,7 @@ Ensure you have Python 3.x installed. It is recommended to use a virtual environ
 ## How to Run
 
 1.  **Train Model and Generate Artifacts:**
-    * Open and run all cells in the Jupyter Notebook `tubes-ML_terakhir.ipynb`.
+    * Open and run all cells in the Jupyter Notebook `tubes-ML_terakhir.ipynb`. If you are not running it in kaggle, then you have to manually download, or  use kaggle CLI to download the dataset to your local environment. Then you would have to configure the all of the path manually.
     * This will generate the `.tflite` model file (e.g., `sentiment_model.tflite`) and `wordIndex.json`. Ensure these files are saved in a location accessible by the Flask server (e.g., within the `tflite_server/model/` directory). Adjust paths in `server.py` if necessary.
 
 2.  **Run Backend Flask Server:**
