@@ -1,8 +1,9 @@
 # Steam Game Review Sentiment Analysis using LSTM and CNN1D
 
-## Deployed Apps
+## Deployed Links
 
-- **Streamlit App (Aeriallize)**: [Open App](https://aeriallize.streamlit.app/)
+- **Frontend (Flutter Web)**: [Steam Review Analyst](https://rubricate12.github.io/TUBES_ML/)
+- **Backend (Flask API)**: [TFLite NLP Server](https://tflite-nlp-server.onrender.com)
 
 ## Project Description
 
