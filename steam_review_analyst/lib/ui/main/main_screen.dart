@@ -74,12 +74,53 @@ class _MainScreenState extends State<MainScreen> {
                           onPressed:
                               _inputController.text.isNotEmpty
                                   ? () async {
-                                    var result = await ApiService.analyzeReview(_inputController.text);
-                                    Navigator.pushNamed(
-                                      context,
-                                      AppRoute.result.path,
-                                      arguments: result,
+                                    // Show loading dialog
+                                    showDialog(
+                                      context: context,
+                                      barrierDismissible: false,
+                                      builder:
+                                          (_) => Center(
+                                            child: CircularProgressIndicator(),
+                                          ),
                                     );
+
+                                    try {
+                                      var result =
+                                          await ApiService.analyzeReview(
+                                            _inputController.text,
+                                          );
+                                      Navigator.pop(
+                                        context,
+                                      ); // remove loading dialog
+
+                                      if (result != null) {
+                                        Navigator.pushNamed(
+                                          context,
+                                          AppRoute.result.path,
+                                          arguments: result,
+                                        );
+                                      } else {
+                                        // Show error if null
+                                        ScaffoldMessenger.of(
+                                          context,
+                                        ).showSnackBar(
+                                          SnackBar(
+                                            content: Text(
+                                              "Failed to get response from server",
+                                            ),
+                                          ),
+                                        );
+                                      }
+                                    } catch (e) {
+                                      Navigator.pop(
+                                        context,
+                                      ); // remove loading dialog
+                                      ScaffoldMessenger.of(
+                                        context,
+                                      ).showSnackBar(
+                                        SnackBar(content: Text("Error: $e")),
+                                      );
+                                    }
                                   }
                                   : null,
                           child: Text('Analyze'),
