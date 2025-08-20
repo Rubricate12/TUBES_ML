@@ -1,5 +1,9 @@
 # Steam Game Review Sentiment Analysis using LSTM and CNN1D
 
+## Deployed Apps
+
+- **Streamlit App (Aeriallize)**: [Open App](https://aeriallize.streamlit.app/)
+
 ## Project Description
 
 This project aims to perform sentiment analysis on Steam game review texts. A machine learning model is trained to classify reviews as positive or negative. The project covers stages from data preprocessing, model training using Long Short-Term Memory (LSTM) and 1D Convolutional Neural Network (CNN1D), to model implementation in a client-server architecture with a Flask backend and a Flutter frontend.
