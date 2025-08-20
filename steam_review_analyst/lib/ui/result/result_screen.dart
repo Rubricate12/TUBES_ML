@@ -47,18 +47,35 @@ class ResultScreen extends StatelessWidget {
                           style: Theme.of(context).textTheme.headlineLarge,
                         ),
                         SizedBox(height: 24),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(result.icon, size: 48, color: result.color),
-                            SizedBox(width: 16),
-                            Text(
-                              result.label,
-                              style: Theme.of(context).textTheme.displaySmall
-                                  ?.copyWith(color: result.color),
-                            ),
-                          ],
+                        AnimatedScale(
+                          duration: Duration(milliseconds: 400),
+                          scale: 1.2,
+                          curve: Curves.easeOutBack,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(result.icon, size: 48, color: result.color),
+                              SizedBox(width: 16),
+                              Text(
+                                result.label,
+                                style: Theme.of(context).textTheme.displaySmall
+                                    ?.copyWith(color: result.color),
+                              ),
+                            ],
+                          ),
                         ),
+                        // Row(
+                        //   mainAxisAlignment: MainAxisAlignment.center,
+                        //   children: [
+                        //     Icon(result.icon, size: 48, color: result.color),
+                        //     SizedBox(width: 16),
+                        //     Text(
+                        //       result.label,
+                        //       style: Theme.of(context).textTheme.displaySmall
+                        //           ?.copyWith(color: result.color),
+                        //     ),
+                        //   ],
+                        // ),
                         SizedBox(height: 24),
                         FilledButton(
                           onPressed: () {
